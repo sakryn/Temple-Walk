@@ -11,32 +11,25 @@
 
   <body>
     <a-scene>
-    <a-assets>
-      <img id="bg" src="360backgrounds/01TempleVillage.jpg">
-    </a-assets>
+    
+    <!-- Set up a camera -->
+    <a-camera position="0 1 0"></a-camera>
 
-    <a-sky src="#bg" rotation="0 -90 0"></a-sky>
+    <!-- Import background assets-->
+  <a-assets>
+    <img id="01" src="360backgrounds/01TempleVillage.jpg" />
+  </a-assets>
 
-      <a-box 
-        position="0 1 -3" 
-        color="tomato" 
-        src = "360backgrounds/01TempleVillage.jpg"
-        rotation="0 0 0"
-        width = "1"
-        height = "1"
-        depth = "1"
-        scale = "1 1 1">
-    </a-box>
 
-    <a-cylinder
-      position = "0 1 3"
-      color = "green"
-      radius = 2
-      segments-radial = 8
-      open-ended = "true"
-      side = "single">
+    <!-- The First level area -->
+    <a-sphere 
+      material = "src: #01; side: back"      
+      rotation = "0 0 0"
+      position = "0 0 -5"
+      radius = 100>
+    </a-sphere>
 
-    </a-cylinder>
+
 
     </a-scene>
   </body>
