@@ -3,34 +3,46 @@
 <html>
   <head>
     <meta charset="utf-8">
-    <title>My A-Frame VR Scene</title>
-    <script src="https://aframe.io/releases/1.4.2/aframe.min.js"></script>
+    <title>Temple Walk</title>
+
+    <!-- Import AFrame -->
+    <script src="https://aframe.io/releases/1.5.0/aframe.min.js"></script>
+    <script src="bound.js"></script>
   </head>
-
   
-
   <body>
     <a-scene>
-    
-    <!-- Set up a camera -->
-    <a-camera position="0 1 0"></a-camera>
 
-    <!-- Import background assets-->
-  <a-assets>
+    <!-- Import assets-->
+    <a-assets>
     <img id="01" src="360backgrounds/01TempleVillage.jpg" />
-  </a-assets>
+    </a-assets>
 
 
-    <!-- The First level area -->
+      <!-- The player character. Consists of a sphere, a camera, and a cursor -->
+      <a-sphere id="player" circular-boundary position="0 1 0" color="blue" visible = "true" look-controls wasd-controls="acceleration: 50">
+        <a-entity camera position="0 1 -1"></a-entity>
+        <a-entity 
+          cursor="fuse: false; rayOrigin: mouse"
+          raycaster="objects: .clickable"
+          position="0 1 -3" 
+          geometry="primitive: ring; radiusInner: .03; radiusOuter: .04" 
+          material="color: blue; shader: flat">
+        </a-entity>
+      </a-sphere>
+
+
+      <!-- The First level area -->
+
+
     <a-sphere 
+      id = "01Level"
       material = "src: #01; side: back"      
       rotation = "0 0 0"
-      position = "0 0 -5"
-      radius = 100>
+      position = "0 1 0"
+      radius = "100">
     </a-sphere>
-
-
-
+ 
     </a-scene>
   </body>
 </html>
