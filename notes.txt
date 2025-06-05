@@ -1,7 +1,3 @@
-Make a teleportation script. 
-    Teleport cubes
-    script
-    change background and player positions as well
+Make a teleportation script for level changing DONE
 
-
-Implement background music
+Implement background music. DONE

@@ -7,7 +7,9 @@
 
     <!-- Import AFrame -->
     <script src="https://aframe.io/releases/1.5.0/aframe.min.js"></script>
-    <script src="bound.js"></script>
+    <script src="bound.js" defer></script>
+    <script src="changeLevel.js" defer></script>
+    <script src="teleportPlayer.js" defer></script>
   </head>
   
   <body>
@@ -18,6 +20,7 @@
             <source src="Music/Background Music.mp3" type="audio/mpeg">
           </audio>
 
+          <!-- Script to start Background Music-->
           <script>
             const music = document.getElementById("bg-music");
             
@@ -43,6 +46,10 @@
     <!-- Import assets-->
     <a-assets>
     <img id="01" src="360backgrounds/01TempleVillage.jpg" />
+    <img id="02" src="360backgrounds/02VillageGate.jpg" />
+    <img id="03" src="360backgrounds/03ZenBridge.jpg" />
+    <img id="04" src="360backgrounds/04ShrineGarden.jpg" />
+    <img id="05" src="360backgrounds/05ReflectionPool.jpg" />
     </a-assets>
 
 
@@ -59,17 +66,17 @@
       </a-sphere>
 
 
-      <!-- The First level area -->
-
+    <!-- The level background -->
 
     <a-sphere 
-      id = "01Level"
+      id = "background"
       material = "src: #01; side: back"      
-      rotation = "0 0 0"
+      rotation = "0 90 0"
       position = "0 1 0"
-      radius = "100">
+      radius = "100"
+      opacity = "1">
     </a-sphere>
- 
-    </a-scene>
+
+     </a-scene>
   </body>
 </html>
