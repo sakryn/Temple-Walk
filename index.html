@@ -11,6 +11,7 @@
     <script src="changeLevel.js" defer></script>
     <script src="teleportPlayer.js" defer></script>
     <script src="backgroundMusic.js" defer></script>
+    <script src="checkIntersection.js" defer></script>
   </head>
   
   <body>
@@ -34,7 +35,7 @@
 
       <!-- The player character. Consists of a sphere, a camera, and a cursor -->
       <a-sphere id="player" circular-boundary position="0 1 0" color="blue" visible = "true" look-controls wasd-controls="acceleration: 50">
-        <a-entity camera position="0 1 -1"></a-entity>
+        <a-entity id="camera" camera position="0 1 -1"></a-entity>
         <a-entity 
           cursor="fuse: false; rayOrigin: mouse"
           raycaster="objects: .clickable"
@@ -55,6 +56,9 @@
       radius = "100"
       opacity = "1">
     </a-sphere>
+
+    <!-- The level exit. Will be transparent -->
+    <a-box id="levelExit" position="0 1 -30" color="red" depth="1" height="1" width="1"></a-box>
 
      </a-scene>
   </body>
