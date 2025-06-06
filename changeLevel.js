@@ -1,12 +1,7 @@
 
 function changeLevel(sphere, material) {
 
-    teleportPlayer(0,0);
-
-    console.log("Material:", material);
-    console.log("Material Source ID:", material.src.id);
     currentSrc = material.src.id;
-    console.log("Current src:", currentSrc); // Debug line
 
     if (currentSrc === "01") {
         teleportPlayer(0,0);
