@@ -1,2 +1,5 @@
 Implemented level changing. If the player approaches the red cube, they are taken to the next level. 
 This can be further modified by changing the location of the cube, such as at a temple entrance or a door.
+
+Added a function script to teleport the level exit cube to different locations. 
+Will be useful for uniquelly configuring each level's exit point.
