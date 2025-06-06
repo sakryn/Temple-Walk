@@ -1,32 +1,31 @@
 
-window.addEventListener("keydown", function (event) {
-    const sphere = this.document.querySelector("#background");
+function changeLevel(sphere, material) {
 
-    switch (event.key) {
-        
-        case "1":
-            sphere.setAttribute("src", "#01");
-            teleportPlayer(0,0);
-            break;
+    teleportPlayer(0,0);
 
-        case "2":
-            sphere.setAttribute("src", "#02");
-            teleportPlayer(0,0);
-            break;
+    console.log("Material:", material);
+    console.log("Material Source ID:", material.src.id);
+    currentSrc = material.src.id;
+    console.log("Current src:", currentSrc); // Debug line
 
-        case "3":
-            sphere.setAttribute("src", "#03");
-            teleportPlayer(0,0);
-            break;
-
-        case "4":
-            sphere.setAttribute("src", "#04");
-            teleportPlayer(0,0);
-            break;
-
-        case "5":
-            sphere.setAttribute("src", "#05");
-            teleportPlayer(0,0);
-            break;
+    if (currentSrc === "01") {
+        teleportPlayer(0,0);
+        sphere.setAttribute("material", "src: #02; side: back");
     }
-});
+    else if (currentSrc === "02") {
+        teleportPlayer(0,0);
+        sphere.setAttribute("material", "src: #03; side: back");
+    }
+    else if (currentSrc === "03") {
+        teleportPlayer(0,0);
+        sphere.setAttribute("material", "src: #04; side: back");
+    }
+    else if (currentSrc === "04") {
+        teleportPlayer(0,0);
+        sphere.setAttribute("material", "src: #05; side: back");
+    }
+    else if (currentSrc === "05") {
+        teleportPlayer(0,0);
+        sphere.setAttribute("material", "src: #01; side: back");
+    }
+}

@@ -1,10 +1,2 @@
-Created a new function file for the background music player. 
-It'll be simpler to have each function in their own js file.
-
-Able to change the background (level) via number keys 1-5. 
-When you do, I made code to teleport the player to the center of the new level.
-
-I have created an "exit cube" that changes color when the player comes close to it.
-This will be developed further to allow the player to exit the level when they touch it, using the 
-background changing function that's already in place.
-
+Implemented level changing. If the player approaches the red cube, they are taken to the next level. 
+This can be further modified by changing the location of the cube, such as at a temple entrance or a door.
