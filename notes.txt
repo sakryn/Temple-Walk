@@ -1,4 +1,9 @@
-Clean up level exit placements to match with original exits
+Clean up level exit placements to match with original exits (DONE)
 
-VR debugging checklist
-    see email
+VR debugging checklist:
+
+VR mode starts from button press (DONE)
+Music starts from button press (DONE)
+
+<a-entity camera wasd-controls look-controls></a-entity>
+I have wasd-controls and look-controls on the player sphere, and attached the camera to the sphere. Is that ok?
