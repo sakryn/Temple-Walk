@@ -7,3 +7,11 @@ Music starts from button press (DONE)
 
 <a-entity camera wasd-controls look-controls></a-entity>
 I have wasd-controls and look-controls on the player sphere, and attached the camera to the sphere. Is that ok?
+
+Added Catapallo logo above the start button on the start screen. Created a new asset file for furture logos.
+
+To use the 3d models as level exits I did the following:
+    Imported glb models. 
+    Changed the level exit from a-box to a-entity. 
+    Replace the levelExit box with the bridge glb model.
+    Laid out the outline for a "change exit" function

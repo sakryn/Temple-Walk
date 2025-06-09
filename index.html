@@ -16,6 +16,7 @@
     <script src="teleport.js" defer></script>
     <script src="teleportLevelExit.js" defer></script>
     <script src="startScreen.js" defer></script>
+    <script src="changeExit.js" defer></script>
 
 
     <style>
@@ -36,6 +37,12 @@
         justify-content: center;
         align-items: center;
         z-index: 10;
+        flex-direction: column;  
+        gap: 20px;
+      }
+      #startImage{
+        width: 50%;
+        height: 50%;
       }
       #startBtn {
         font-size: 24px;
@@ -58,16 +65,24 @@
     </audio>
 
     <div id="startScreen">
-      <button id="startBtn">Enter VR Scene</button>
+      <img id="startImage" src="Logos/logo-color-light trademark.png"/>
+      <button id="startBtn">Begin Temple Walk</button>
     </div>
 
-        <!-- Import assets-->
+    <!-- Import assets-->
     <a-assets>
     <img id="01" src="360backgrounds/01TempleVillage.jpg" />
     <img id="02" src="360backgrounds/02VillageGate.jpg" />
     <img id="03" src="360backgrounds/03ZenBridge.jpg" />
     <img id="04" src="360backgrounds/04ShrineGarden.jpg" />
     <img id="05" src="360backgrounds/05ReflectionPool.jpg" />
+
+    <a-asset-item id="bridge" src="GLBs/Bridge GLB.glb"></a-asset-item>
+    <a-asset-item id="crackedBowl" src="GLBs/Cracked Bowl GLB.glb"></a-asset-item>
+    <a-asset-item id="gold" src="GLBs/Gold GLB.glb"></a-asset-item>
+    <a-asset-item id="lotusFlower" src="GLBs/Lotus Flower.glb"></a-asset-item>
+    <a-asset-item id="repairedCrackedBowl" src="GLBs/Repaired Cracked Bowl.glb"></a-asset-item>
+
     </a-assets>
 
 
@@ -99,7 +114,7 @@
     </a-sphere>
 
     <!-- The level exit. Will be transparent -->
-    <a-box id="levelExit" position="-75 1 -55" color="red" depth="1" height="1" width="1"></a-box>
+    <a-entity id="levelExit" gltf-model="#bridge" position="-75 1 -55" depth="1" height="1" width="1" scale = "3 3 3"></a-entity>
 
      </a-scene>
   </body>
