@@ -6,6 +6,7 @@ function changeLevel(sphere, material) {
     if (currentSrc === "01") {
         teleportPlayer(0,0);
         sphere.setAttribute("material", "src: #02; side: back");
+        teleportLevelExit(0,20) // set exit location for NEXT level
     }
     else if (currentSrc === "02") {
         teleportPlayer(0,0);
