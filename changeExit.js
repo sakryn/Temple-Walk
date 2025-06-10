@@ -28,6 +28,5 @@ function changeExit(currentLevel){
         exit should be lotus
 
     05:
-        exit should be ??? Maybe a glowy thing
-
+        exit should be lotus!
     */
