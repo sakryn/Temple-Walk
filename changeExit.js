@@ -1,10 +1,28 @@
 function changeExit(currentLevel){
 
-    levelExit = document.getElementById('levelExit');
+    let levelExit = document.getElementById('levelExit');
 
-    levelExit.setAttribute("gltf-model", "#crackedBowl");
 
-    // test using output console
+    if (currentLevel === "01"){
+        levelExit.setAttribute("gltf-model", "GLBs/Bridge GLB.glb");
+    }
+
+    else if (currentLevel === "02"){
+        levelExit.setAttribute("gltf-model", "GLBs/Gold GLB.glb");
+    }
+
+    else if (currentLevel === "03"){
+        levelExit.setAttribute("gltf-model", "GLBs/Red Lantern.glb");
+    }
+
+    else if (currentLevel === "04"){
+        levelExit.setAttribute("gltf-model", "GLBs/Lotus Flower.glb");
+    }
+
+    else if (currentLevel === "05"){
+        levelExit.setAttribute("gltf-model", "GLBs/Japanese Gate.glb");
+    }
+
 }
 
     // given currentLevel:
@@ -13,20 +31,3 @@ function changeExit(currentLevel){
         // (optional) change exit rotation
     
     // should be called within changeLevel(), so that id # can be passed
-
-    /*
-    01:
-        exit should be gate (MISSING)
-
-    02:
-        exit should be bridge
-
-    03:
-        exit should be gold
-
-    04:
-        exit should be lotus
-
-    05:
-        exit should be lotus!
-    */

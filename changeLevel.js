@@ -13,20 +13,24 @@ function changeLevel(sphere, material) {
         teleportPlayer(0,0);
         sphere.setAttribute("material", "src: #03; side: back");
         teleportLevelExit(80,-30); // exit for LEVEL 3
+        changeExit(currentSrc);
     }
     else if (currentSrc === "03") {
         teleportPlayer(0,0);
         sphere.setAttribute("material", "src: #04; side: back");
         teleportLevelExit(-64,55); // exit for LEVEL 4
+        changeExit(currentSrc);
     }
     else if (currentSrc === "04") {
         teleportPlayer(0,0);
         sphere.setAttribute("material", "src: #05; side: back");
         teleportLevelExit(86,-26); // exit for LEVEL 5
+        changeExit(currentSrc);
     }
     else if (currentSrc === "05") {
         teleportPlayer(0,0);
         sphere.setAttribute("material", "src: #01; side: back");
         teleportLevelExit(-75,-55); // exit for LEVEL 1
+        changeExit(currentSrc);
     }
 }

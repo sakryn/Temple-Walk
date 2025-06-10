@@ -13,7 +13,6 @@
     <script src="teleportPlayer.js" defer></script>
     <script src="backgroundMusic.js" defer></script>
     <script src="checkIntersection.js" defer></script>
-    <script src="teleport.js" defer></script>
     <script src="teleportLevelExit.js" defer></script>
     <script src="startScreen.js" defer></script>
     <script src="changeExit.js" defer></script>
@@ -81,7 +80,8 @@
     <a-asset-item id="crackedBowl" src="GLBs/Cracked Bowl GLB.glb"></a-asset-item>
     <a-asset-item id="gold" src="GLBs/Gold GLB.glb"></a-asset-item>
     <a-asset-item id="lotusFlower" src="GLBs/Lotus Flower.glb"></a-asset-item>
-    <a-asset-item id="repairedCrackedBowl" src="GLBs/Repaired Cracked Bowl.glb"></a-asset-item>
+    <a-asset-item id="repairedBowl" src="GLBs/Repaired Cracked Bowl.glb"></a-asset-item>
+    <a-asset-item id="gate" src="GLBs/Japanese Gate.glb"></a-asset-item>
 
     </a-assets>
 
@@ -114,7 +114,7 @@
     </a-sphere>
 
     <!-- The level exit. Will be transparent -->
-    <a-entity id="levelExit" gltf-model="#bridge" position="-75 1 -55" depth="1" height="1" width="1" scale = "3 3 3"></a-entity>
+    <a-entity id="levelExit" gltf-model="#gate" position="-75 1 -55" depth="1" height="1" width="1" scale = "3 3 3"></a-entity>
 
      </a-scene>
   </body>
