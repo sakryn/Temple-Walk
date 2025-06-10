@@ -4,7 +4,7 @@ function changeExit(currentLevel){
 
 
     if (currentLevel === "01"){
-        levelExit.setAttribute("gltf-model", "GLBs/Bridge GLB.glb");
+        levelExit.setAttribute("gltf-model", "GLBs/Japanese Gate.glb");
     }
 
     else if (currentLevel === "02"){
@@ -20,7 +20,7 @@ function changeExit(currentLevel){
     }
 
     else if (currentLevel === "05"){
-        levelExit.setAttribute("gltf-model", "GLBs/Japanese Gate.glb");
+        levelExit.setAttribute("gltf-model", "GLBs/Bridge GLB.glb");
     }
 
 }

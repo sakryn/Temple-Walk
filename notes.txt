@@ -1,1 +1,9 @@
 changeExit implemented at a basic level. levelExits now look thematically appropriate.
+Got the cursor to be visible again.
+Created a spin animation for the level exits
+Changed the way an intersection between the player and an exit is detected, in order to account for the unique exit shapes.
+    I've kept the original intersection detection method in case it is needed later.
+    Need feedback on whether the new method is better or worse.
+
+
+implement a loading screen

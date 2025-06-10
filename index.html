@@ -16,8 +16,9 @@
     <script src="teleportLevelExit.js" defer></script>
     <script src="startScreen.js" defer></script>
     <script src="changeExit.js" defer></script>
+    <script src="spin.js" defer></script>
 
-
+    <!-- CSS Style for Start Screen -->
     <style>
       body, html {
         margin: 0;
@@ -90,7 +91,7 @@
 
       
       <!-- The player character. Consists of a sphere, a camera, and a cursor -->
-      <a-sphere id="player" circular-boundary position="0 1 0" color="blue" visible = "false" look-controls wasd-controls="acceleration: 50">
+      <a-entity id="player" circular-boundary position="0 1 0" look-controls wasd-controls="acceleration: 50">
         <a-entity id="camera" camera position="0 1 -1"></a-entity>
         <a-entity 
           cursor="fuse: false; rayOrigin: mouse"
@@ -99,7 +100,8 @@
           geometry="primitive: ring; radiusInner: .03; radiusOuter: .04" 
           material="color: blue; shader: flat">
         </a-entity>
-      </a-sphere>
+      </a-entity>
+
 
 
     <!-- The level background -->
@@ -114,8 +116,11 @@
     </a-sphere>
 
     <!-- The level exit. Will be transparent -->
-    <a-entity id="levelExit" gltf-model="#gate" position="-75 1 -55" depth="1" height="1" width="1" scale = "3 3 3"></a-entity>
-
+    <a-entity id="levelExit" 
+        gltf-model="#bridge" 
+        spin 
+        collision-check 
+        position="-75 1 -55" depth="1" height="1" width="1" scale = "3 3 3"></a-entity>
      </a-scene>
   </body>
 </html>
