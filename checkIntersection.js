@@ -22,6 +22,8 @@ const sphere = document.querySelector("#background");
     // Start checking for intersections after scene loads
     document.querySelector('a-scene').addEventListener('loaded', checkIntersection);*/
 
+window.exitEnabled = false; // A global variable. It's a surprise tool we'll use for later
+
     AFRAME.registerComponent('collision-check', {
     init: function () {
         this.player = document.querySelector('#player');
@@ -31,7 +33,7 @@ const sphere = document.querySelector("#background");
     },
     
     tick: function () {
-        if (!this.player || !this.exit) return;
+        if (!this.player || !this.exit || !window.exitEnabled) return;
 
         let playerBox = new THREE.Box3().setFromObject(this.player.object3D);
         let exitBox = new THREE.Box3().setFromObject(this.exit.object3D);

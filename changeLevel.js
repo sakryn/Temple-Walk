@@ -1,6 +1,5 @@
 
 function changeLevel(sphere, material) {
-
     currentSrc = material.src.id;
 
     if (currentSrc === "01") {
@@ -46,4 +45,6 @@ function changeLevel(sphere, material) {
             changeExit(currentSrc);
         }, 1);
     }
+
+    window.exitEnabled = false;
 }
