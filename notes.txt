@@ -1,4 +1,4 @@
-Included a small loading text to appear after the start button is pressed.
+Included a small loading text to appear after the start button is pressed. (DONE)
 
 Imported the rest of the audio/sfx
 Made a js file that plays the audio in order. Will be built further upon in the future
@@ -7,3 +7,5 @@ Now, only after dialogue is spoken (using keys 1-5), you'll be able to move on t
 
 Imported Hiro and added him to the scene.
     Will have the dialogue run when you come close enough to him (requires its own js function)
+    Will need collision detection on him so the player can't walk through him
+Created a teleport hiro function. He now appears near each level exit.

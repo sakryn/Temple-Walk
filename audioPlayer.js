@@ -64,6 +64,11 @@ window.addEventListener("DOMContentLoaded", function () {
             audio_18.onended = function () { window.exitEnabled = true; };
         }
 
+        // Debug option for instant level access
+        if (e.key === "6"){
+            window.exitEnabled = true;
+        }
+
 
     });
 });

@@ -5,6 +5,7 @@ function changeLevel(sphere, material) {
     if (currentSrc === "01") {
         sphere.setAttribute("material", "src: #02; side: back");
         teleportLevelExit(-17, 88); // exit for LEVEL 2
+        teleportHiro(-24,44);
         setTimeout(() => {
             teleportPlayer(0, 0);
             changeExit(currentSrc);
@@ -14,6 +15,7 @@ function changeLevel(sphere, material) {
 
         sphere.setAttribute("material", "src: #03; side: back");
         teleportLevelExit(80, -30); // exit for LEVEL 3
+        teleportHiro(37,6);
         setTimeout(() => {
             teleportPlayer(0, 0);
             changeExit(currentSrc);
@@ -23,6 +25,7 @@ function changeLevel(sphere, material) {
 
         sphere.setAttribute("material", "src: #04; side: back");
         teleportLevelExit(-64, 55); // exit for LEVEL 4
+        teleportHiro(-50,17);
         setTimeout(() => {
             teleportPlayer(0, 0);
             changeExit(currentSrc);
@@ -32,6 +35,7 @@ function changeLevel(sphere, material) {
 
         sphere.setAttribute("material", "src: #05; side: back");
         teleportLevelExit(86, -26); // exit for LEVEL 5
+        teleportHiro(32,-23);
         setTimeout(() => {
             teleportPlayer(0, 0);
             changeExit(currentSrc);
@@ -41,6 +45,7 @@ function changeLevel(sphere, material) {
 
         sphere.setAttribute("material", "src: #01; side: back");
         teleportLevelExit(-75, -55); // exit for LEVEL 1
+        teleportHiro(-24,-37);
         setTimeout(() => {
             teleportPlayer(0, 0);
             changeExit(currentSrc);
