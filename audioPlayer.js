@@ -24,7 +24,7 @@ window.addEventListener("DOMContentLoaded", function () {
         audio_01.play();
         audio_01.onended = function () { audio_02.play(); };
         audio_02.onended = function () { audio_03.play(); };
-        window.exitEnabled = true;
+        audio_03.onended = function () { window.exitEnabled = true; };
     }
 
 
@@ -34,7 +34,7 @@ window.addEventListener("DOMContentLoaded", function () {
         audio_05.onended = function () { audio_06.play(); };
         // After 6, wait 15 seconds
         audio_06.onended = function () { audio_07.play(); };
-        window.exitEnabled = true;
+        audio_07.onended = function () { window.exitEnabled = true; };
     }
 
 
@@ -44,14 +44,14 @@ window.addEventListener("DOMContentLoaded", function () {
         // After 9, wait 15 seconds
         audio_09.onended = function () { audio_10.play(); };
         audio_10.onended = function () { audio_11.play(); };
-        window.exitEnabled = true;
+        audio_10.onended = function () { window.exitEnabled = true; };
     }
 
 
     if (e.key === "4") {
         audio_12.play();
         audio_12.onended = function () { audio_13.play(); };
-        window.exitEnabled = true;
+        audio_13.onended = function () { window.exitEnabled = true; };
     }
 
 
@@ -61,7 +61,7 @@ window.addEventListener("DOMContentLoaded", function () {
         audio_15.onended = function () { audio_16.play(); };
         audio_16.onended = function () { audio_17.play(); };
         audio_17.onended = function () { audio_18.play(); };
-        window.exitEnabled = true;
+        audio_18.onended = function () { window.exitEnabled = true; };
     }
 
 
