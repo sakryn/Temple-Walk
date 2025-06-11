@@ -4,3 +4,6 @@ Imported the rest of the audio/sfx
 Made a js file that plays the audio in order. Will be built further upon in the future
 To make sure the player can't go to the next level while dialogue is being spoken, I added a global variable called exitEnabled. 
 Now, only after dialogue is spoken (using keys 1-5), you'll be able to move on to the next level.
+
+Imported Hiro and added him to the scene.
+    Will have the dialogue run when you come close enough to him (requires its own js function)
