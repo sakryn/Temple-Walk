@@ -6,6 +6,6 @@ To make sure the player can't go to the next level while dialogue is being spoke
 Now, only after dialogue is spoken (using keys 1-5), you'll be able to move on to the next level.
 
 Imported Hiro and added him to the scene.
-    Will have the dialogue run when you come close enough to him (requires its own js function)
-    Will need collision detection on him so the player can't walk through him
+Dialogue now runs when you come close enough to him
+    Will need collision detection on him so the player can't walk through him?
 Created a teleport hiro function. He now appears near each level exit.

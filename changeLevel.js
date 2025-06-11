@@ -53,4 +53,5 @@ function changeLevel(sphere, material) {
     }
 
     window.exitEnabled = false;
+    window.audioPlayed = false;
 }

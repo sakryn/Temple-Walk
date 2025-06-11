@@ -22,23 +22,40 @@ const sphere = document.querySelector("#background");
     // Start checking for intersections after scene loads
     document.querySelector('a-scene').addEventListener('loaded', checkIntersection);*/
 
-window.exitEnabled = false; // A global variable. It's a surprise tool we'll use for later
+// Global variables for important checks
+window.exitEnabled = false;
+window.audioPlayed = false;
 
-    AFRAME.registerComponent('collision-check', {
-    init: function () {
-        this.player = document.querySelector('#player');
-        this.exit = document.querySelector('#levelExit');
-        this.sphere = document.querySelector("#background");
-        this.material = this.sphere.getAttribute("material");
-    },
-    
-    tick: function () {
-        if (!this.player || !this.exit || !window.exitEnabled) return;
+AFRAME.registerComponent('collision-check', {
+  init: function () {
+    this.player = document.querySelector('#player');
+    this.exit = document.querySelector('#levelExit');
+    this.sphere = document.querySelector("#background");
+    this.material = this.sphere.getAttribute("material");
+    this.hiro = document.querySelector("#hiro");
+  },
 
-        let playerBox = new THREE.Box3().setFromObject(this.player.object3D);
-        let exitBox = new THREE.Box3().setFromObject(this.exit.object3D);
+  tick: function () {
 
-        if (playerBox.intersectsBox(exitBox)) {            
-            changeLevel(this.sphere, this.material);}
+    // Check distance between player and hiro to begin dialogue
+    let playerPos = this.player.object3D.position;
+    let hiroPos = this.hiro.object3D.position;
+    let distance = playerPos.distanceTo(hiroPos);
+    if (distance < 20 && !window.audioPlayed) { // Maybe check if the game was completed? A future task...
+      window.audioPlayed = true;
+      audioPlayer(this.material.src.id);
     }
+
+    // Check intersection between player and level exit
+    if (!this.player || !this.exit || !window.exitEnabled) return;
+
+    let playerBox = new THREE.Box3().setFromObject(this.player.object3D);
+    let exitBox = new THREE.Box3().setFromObject(this.exit.object3D);
+
+    if (playerBox.intersectsBox(exitBox)) {
+      changeLevel(this.sphere, this.material);
+    }
+
+
+  }
 });
