@@ -7,6 +7,7 @@
 
   <!-- Import AFrame-->
   <script src="https://aframe.io/releases/1.5.0/aframe.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/gh/n5ro/aframe-extras@6.1.1/dist/aframe-extras.min.js"></script>
 
 
   <!-- Import Javascript files-->
@@ -22,6 +23,8 @@
   <script src="audioPlayer.js" defer></script>
   <script src="teleportHiro.js" defer></script>
   <script src="face-player.js" defer></script>
+  <script src="teleportBowl.js" defer></script>
+  <script src="changeBowl.js" defer></script>
   <script src="printPlayerCoords.js" defer></script>
 
   <!-- CSS Style for Start Screen -->
@@ -88,7 +91,7 @@
 
   </div>
 
-  <!-- Import assets: backgrounds, models, audio, SFX-->
+  <!-- Import assets: backgrounds, models, animations, audio, SFX-->
   <a-assets>
     <img id="01" src="360backgrounds/01TempleVillage.jpg" />
     <img id="02" src="360backgrounds/02VillageGate.jpg" />
@@ -102,7 +105,8 @@
     <a-asset-item id="lotusFlower" src="GLBs/Lotus Flower.glb"></a-asset-item>
     <a-asset-item id="repairedBowl" src="GLBs/Repaired Cracked Bowl.glb"></a-asset-item>
     <a-asset-item id="gate" src="GLBs/Japanese Gate.glb"></a-asset-item>
-    <a-asset-item id="Hiro" src="GLBs/Hiro GLB.glb"></a-asset-item>
+
+    <a-asset-item id="Hiro" src="hiro-animations/Animation_Walking_withSkin.glb"></a-asset-item>
 
     <audio id="Audio_01" src="Audio/Audio_01.mp3"></audio>
     <audio id="Audio_02" src="Audio/Audio_02.mp3"></audio>
@@ -133,7 +137,7 @@
 
 
     <!-- The player character. Consists of a sphere, a camera, and a cursor -->
-    <a-entity id="player" circular-boundary position="0 1 0" look-controls wasd-controls="acceleration: 50">
+    <a-entity id="player" circular-boundary position="0 0.5 0" look-controls wasd-controls="acceleration: 50">
       <a-entity id="camera" camera position="0 1 -1"></a-entity>
       <a-entity cursor="fuse: false; rayOrigin: mouse" raycaster="objects: .clickable" position="0 1 -3"
         geometry="primitive: ring; radiusInner: .03; radiusOuter: .04" material="color: blue; shader: flat">
@@ -152,8 +156,11 @@
     </a-entity>
 
     <!-- Hiro -->
-    <a-entity id="hiro" gltf-model='#Hiro' position="-24 1 -37" scale="2 2 2" face-player>
+    <a-entity id="hiro" gltf-model="#Hiro" animation-mixer position="-24 0 -37" scale="1.5 1.5 1.5" face-player>
     </a-entity>
+
+    <!-- The Bowl -->
+    <a-entity id="bowl" gltf-model="#crackedBowl" position = "-22 0 -35"></a-entity>
 
   </a-scene>
 </body>

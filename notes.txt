@@ -1,2 +1,7 @@
 Imported a silent 15 second audio to make the player wait. (DONE)
 Created new component function, such that Hiro now rotates to always face the player. (DONE)
+
+Import a-frame extras to use the "animation mixer" component. Necessary for animations to run.
+Made a teleport bowl function
+Made a change bowl function to switch it from cracked to repaired at the right time
+Bowl now moves with Hiro on each level change
