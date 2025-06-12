@@ -5,3 +5,7 @@ Import a-frame extras to use the "animation mixer" component. Necessary for anim
 Made a teleport bowl function
 Made a change bowl function to switch it from cracked to repaired at the right time
 Bowl now moves with Hiro on each level change
+(DONE)
+
+
+Bowl now transitions from cracked to repaired - with sound effect. 

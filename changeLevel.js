@@ -28,7 +28,6 @@ function changeLevel(sphere, material) {
         sphere.setAttribute("material", "src: #04; side: back");
         teleportLevelExit(-64, 55); // exit for LEVEL 4
         teleportHiro(-50,17);
-        changeBowl();
         teleportBowl(-50,21);
         setTimeout(() => {
             teleportPlayer(0, 0);
