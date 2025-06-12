@@ -21,6 +21,7 @@
   <script src="spin.js" defer></script>
   <script src="audioPlayer.js" defer></script>
   <script src="teleportHiro.js" defer></script>
+  <script src="face-player.js" defer></script>
   <script src="printPlayerCoords.js" defer></script>
 
   <!-- CSS Style for Start Screen -->
@@ -121,6 +122,7 @@
     <audio id="Audio_16" src="Audio/Audio_16.mp3"></audio>
     <audio id="Audio_17" src="Audio/Audio_17.mp3"></audio>
     <audio id="Audio_18" src="Audio/Audio_18.mp3"></audio>
+    <audio id="Audio_silent" src="Audio/silent15Seconds.mp3"></audio>
 
     <audio id="Broken Plate SFX" src="Music/Broken Plate SFX.mp3"></audio>
 
@@ -149,7 +151,8 @@
       width="1" scale="3 3 3">
     </a-entity>
 
-    <a-entity id="hiro" gltf-model='#Hiro' position="-24 1 -37" scale="2 2 2">
+    <!-- Hiro -->
+    <a-entity id="hiro" gltf-model='#Hiro' position="-24 1 -37" scale="2 2 2" face-player>
     </a-entity>
 
   </a-scene>

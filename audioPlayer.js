@@ -16,6 +16,7 @@ const audio_15 = document.getElementById("Audio_15");
 const audio_16 = document.getElementById("Audio_16");
 const audio_17 = document.getElementById("Audio_17");
 const audio_18 = document.getElementById("Audio_18");
+const audio_silent = document.getElementById("Audio_silent")
 
 function audioPlayer(src) {
 
@@ -31,8 +32,8 @@ function audioPlayer(src) {
         audio_04.play();
         audio_04.onended = function () { audio_05.play(); };
         audio_05.onended = function () { audio_06.play(); };
-        // After 6, wait 15 seconds
-        audio_06.onended = function () { audio_07.play(); };
+        audio_06.onended = function () { audio_silent.play(); };
+        audio_silent.onended = function () { audio_07.play(); };
         audio_07.onended = function () { window.exitEnabled = true; };
     }
 
@@ -40,8 +41,8 @@ function audioPlayer(src) {
     else if (src === "03") {
         audio_08.play();
         audio_08.onended = function () { audio_09.play(); };
-        // After 9, wait 15 seconds
-        audio_09.onended = function () { audio_10.play(); };
+        audio_09.onended = function () { audio_silent.play(); };
+        audio_silent.onended = function () { audio_10.play(); };
         audio_10.onended = function () { audio_11.play(); };
         audio_10.onended = function () { window.exitEnabled = true; };
     }
