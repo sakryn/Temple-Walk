@@ -25,7 +25,8 @@
   <script src="face-player.js" defer></script>
   <script src="teleportBowl.js" defer></script>
   <script src="changeBowl.js" defer></script>
-  <script src="printPlayerCoords.js" defer></script>
+  <script src="teleportTimer.js" defer></script>
+  <!--script src="playerAction.js" defer></script-->
 
   <!-- CSS Style for Start Screen -->
   <style>
@@ -161,6 +162,16 @@
 
     <!-- The Bowl -->
     <a-entity id="bowl" gltf-model="#crackedBowl" position = "-22 0 -35"></a-entity>
+
+    <!-- The Timer  thetaStart: 0; thetaLength: 0 -->
+    <a-entity id="timer"
+        face-player
+        visible = "true"
+        geometry="primitive: ring; radiusInner: 0; radiusOuter: 0.8; thetaStart: 0; thetaLength: 0"
+        material="color: #00ff00; side: double"
+        position="-24 4 -37">
+    </a-entity>
+    
 
   </a-scene>
 </body>

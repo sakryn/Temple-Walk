@@ -1,0 +1,47 @@
+<html>
+  <head>
+    <script src="https://aframe.io/releases/1.4.2/aframe.min.js"></script>
+  </head>
+  <body>
+    <a-scene>
+      <!-- Camera -->
+      <a-entity position="0 1.6 3">
+        <a-camera></a-camera>
+      </a-entity>
+
+      <!-- Timer Ring -->
+      <a-entity id="timerRing"
+        geometry="primitive: ring; radiusInner: 0; radiusOuter: 0.5; thetaStart: 0; thetaLength: 0"
+        material="color: #00ff00; side: double"
+        position="0 2 -3">
+      </a-entity>
+    </a-scene>
+
+    <script>
+      const ring = document.querySelector("#timerRing");
+
+      let duration = 15; // seconds
+      let startTime = Date.now();
+
+      function updateTimer() {
+        let elapsed = (Date.now() - startTime) / 1000;
+        let percent = Math.min(1, elapsed / duration);
+        let theta = percent * 360;
+
+        ring.setAttribute("geometry", {
+          primitive: "ring",
+          radiusInner: 0,
+          radiusOuter: 0.5,
+          thetaStart: 0,
+          thetaLength: theta,
+        });
+
+        if (elapsed < duration) {
+          requestAnimationFrame(updateTimer);
+        }
+      }
+
+      updateTimer();
+    </script>
+  </body>
+</html>

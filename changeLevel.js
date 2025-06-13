@@ -57,6 +57,8 @@ function changeLevel(sphere, material) {
         }, 1);
     }
 
+    teleportTimer();
+
     window.exitEnabled = false;
     window.audioPlayed = false;
 }
