@@ -10,7 +10,7 @@ Changed timer color to a more soothing color
 Position Hiro lower
 Make all the icons bigger (especially gate)
 Make Hiro move less when I move (edge)
-Add in dialogue / closed captioning
+Add in dialogue / closed captioning - (DONE)
 Animation rotation fix to make right
 
 
@@ -20,3 +20,5 @@ Created an image within the player entity to display closed captioning
 Able to open/close caption box with space key
 Able to switch captions with a function
 Captions added!
+
+Tripled the size of the level exit icons
