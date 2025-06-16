@@ -17,3 +17,6 @@ Animation rotation fix to make right
 
 Added a folder full of caption images
 Created an image within the player entity to display closed captioning
+Able to open/close caption box with space key
+Able to switch captions with a function
+Captions added!

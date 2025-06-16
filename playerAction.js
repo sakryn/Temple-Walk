@@ -5,13 +5,15 @@ window.addEventListener("DOMContentLoaded", function () {
     if (e.code === "Space") {
       //const position = player.getAttribute("position");
       //console.log(`Player position: x=${position.x}, y=${position.y}, z=${position.z}`);
-      timerCountdown(5);
+      //timerCountdown(5);
+      toggleCaptions();
     }
     if (e.key === "1") {
       //const position = player.getAttribute("position");
       //console.log(`Player position: x=${position.x}, y=${position.y}, z=${position.z}`);
-      console.log("reset");
-      resetTimer();
+      //console.log("reset");
+      //resetTimer();
+      changeCaptions("03");
     }
   });
 });

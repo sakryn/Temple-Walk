@@ -21,48 +21,55 @@ const audio_plate = document.getElementById("Broken Plate SFX");
 
 function audioPlayer(src) {
 
+    showCaptions();
+
     if (src === "01") {
         audio_01.play();
-        audio_01.onended = function () { audio_02.play(); };
-        audio_02.onended = function () { audio_03.play(); };
-        audio_03.onended = function () { window.exitEnabled = true; };
+        changeCaptions("01");
+        audio_01.onended = function () { audio_02.play(); changeCaptions("02"); };
+        audio_02.onended = function () { audio_03.play(); changeCaptions("03"); };
+        audio_03.onended = function () { window.exitEnabled = true; hideCaptions(); };
     }
 
 
     else if (src === "02") {
         audio_04.play();
-        audio_04.onended = function () { audio_05.play(); };
-        audio_05.onended = function () { audio_06.play(); };
-        audio_06.onended = function () { audio_silent.play(); timerCountdown(15)};
-        audio_silent.onended = function () { audio_07.play(); };
-        audio_07.onended = function () { window.exitEnabled = true; };
+        changeCaptions("04");
+        audio_04.onended = function () { audio_05.play(); changeCaptions("05"); };
+        audio_05.onended = function () { audio_06.play(); changeCaptions("06"); };
+        audio_06.onended = function () { audio_silent.play(); timerCountdown(15) };
+        audio_silent.onended = function () { audio_07.play(); changeCaptions("07"); };
+        audio_07.onended = function () { window.exitEnabled = true; hideCaptions(); };
     }
 
 
     else if (src === "03") {
         audio_08.play();
-        audio_08.onended = function () { audio_09.play(); };
-        audio_09.onended = function () { audio_silent.play(); timerCountdown(15)};
-        audio_silent.onended = function () { audio_10.play(); };
-        audio_10.onended = function () {changeBowl(); audio_plate.play(); };
-        audio_plate.onended = function () { audio_11.play(); };
-        audio_10.onended = function () { window.exitEnabled = true; };
+        changeCaptions("08");
+        audio_08.onended = function () { audio_09.play(); changeCaptions("09"); };
+        audio_09.onended = function () { audio_silent.play(); timerCountdown(15) };
+        audio_silent.onended = function () { audio_10.play(); changeCaptions("10"); };
+        audio_10.onended = function () { changeBowl(); audio_plate.play(); };
+        audio_plate.onended = function () { audio_11.play(); changeCaptions("11"); };
+        audio_10.onended = function () { window.exitEnabled = true; hideCaptions(); };
     }
 
 
     else if (src === "04") {
         audio_12.play();
-        audio_12.onended = function () { audio_13.play(); };
-        audio_13.onended = function () { window.exitEnabled = true; };
+        changeCaptions("12");
+        audio_12.onended = function () { audio_13.play(); changeCaptions("13"); };
+        audio_13.onended = function () { window.exitEnabled = true; hideCaptions(); };
     }
 
 
     else if (src === "05") {
         audio_14.play();
-        audio_14.onended = function () { audio_15.play(); };
-        audio_15.onended = function () { audio_16.play(); };
-        audio_16.onended = function () { audio_17.play(); };
-        audio_17.onended = function () { audio_18.play(); };
-        audio_18.onended = function () { window.exitEnabled = true; };
+        changeCaptions("14");
+        audio_14.onended = function () { audio_15.play(); changeCaptions("15"); };
+        audio_15.onended = function () { audio_16.play(); changeCaptions("16"); };
+        audio_16.onended = function () { audio_17.play(); changeCaptions("17"); };
+        audio_17.onended = function () { audio_18.play(); changeCaptions("18"); };
+        audio_18.onended = function () { window.exitEnabled = true; hideCaptions(); };
     }
 }

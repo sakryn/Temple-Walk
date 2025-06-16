@@ -57,6 +57,7 @@ function changeLevel(sphere, material) {
         }, 1);
     }
 
+    hideCaptions();
     teleportTimer();
     resetTimer();
 
