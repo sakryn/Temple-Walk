@@ -33,7 +33,7 @@ function audioPlayer(src) {
         audio_04.play();
         audio_04.onended = function () { audio_05.play(); };
         audio_05.onended = function () { audio_06.play(); };
-        audio_06.onended = function () { audio_silent.play(); };
+        audio_06.onended = function () { audio_silent.play(); timerCountdown(15)};
         audio_silent.onended = function () { audio_07.play(); };
         audio_07.onended = function () { window.exitEnabled = true; };
     }
@@ -42,7 +42,7 @@ function audioPlayer(src) {
     else if (src === "03") {
         audio_08.play();
         audio_08.onended = function () { audio_09.play(); };
-        audio_09.onended = function () { audio_silent.play(); };
+        audio_09.onended = function () { audio_silent.play(); timerCountdown(15)};
         audio_silent.onended = function () { audio_10.play(); };
         audio_10.onended = function () {changeBowl(); audio_plate.play(); };
         audio_plate.onended = function () { audio_11.play(); };

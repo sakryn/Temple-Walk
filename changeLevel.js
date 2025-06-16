@@ -58,6 +58,7 @@ function changeLevel(sphere, material) {
     }
 
     teleportTimer();
+    resetTimer();
 
     window.exitEnabled = false;
     window.audioPlayed = false;

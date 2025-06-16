@@ -1,1 +1,4 @@
-Implemented a timer countdown and reset function callable with space and keys
+Implemented a timer countdown and reset function callable with space and keys (DONE)
+
+Have the timer count down during silent moments.
+Changed timer color to a more soothing color
