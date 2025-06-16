@@ -1,4 +1,19 @@
-Implemented a timer countdown and reset function callable with space and keys (DONE)
+Implemented a timer countdown and reset function callable with space and keys 
 
 Have the timer count down during silent moments.
 Changed timer color to a more soothing color
+
+( ^ DONE)
+
+
+
+Position Hiro lower
+Make all the icons bigger (especially gate)
+Make Hiro move less when I move (edge)
+Add in dialogue / closed captioning
+Animation rotation fix to make right
+
+
+
+Added a folder full of caption images
+Created an image within the player entity to display closed captioning

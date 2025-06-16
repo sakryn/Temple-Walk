@@ -93,7 +93,7 @@
 
   </div>
 
-  <!-- Import assets: backgrounds, models, animations, audio, SFX-->
+  <!-- Import assets: backgrounds, models, animations, audio, captions, SFX-->
   <a-assets>
     <img id="01" src="360backgrounds/01TempleVillage.jpg" />
     <img id="02" src="360backgrounds/02VillageGate.jpg" />
@@ -108,7 +108,27 @@
     <a-asset-item id="repairedBowl" src="GLBs/Repaired Cracked Bowl.glb"></a-asset-item>
     <a-asset-item id="gate" src="GLBs/Japanese Gate.glb"></a-asset-item>
 
-    <a-asset-item id="Hiro" src="hiro-animations/Animation_Walking_withSkin.glb"></a-asset-item>
+    <a-asset-item id="Hiro" src="hiro-animations/Animation_Running_withSkin.glb"></a-asset-item>
+
+    <img id="CC01" src="Captions/Caption_01.jpg" />
+    <img id="CC02" src="Captions/Caption_02.jpg" />
+    <img id="CC03" src="Captions/Caption_03.jpg" />
+    <img id="CC04" src="Captions/Caption_04.jpg" />
+    <img id="CC05" src="Captions/Caption_05.jpg" />
+    <img id="CC06" src="Captions/Caption_06.jpg" />
+    <img id="CC07" src="Captions/Caption_07.jpg" />
+    <img id="CC08" src="Captions/Caption_08.jpg" />
+    <img id="CC09" src="Captions/Caption_09.jpg" />
+    <img id="CC10" src="Captions/Caption_10.jpg" />
+    <img id="CC11" src="Captions/Caption_11.jpg" />
+    <img id="CC12" src="Captions/Caption_12.jpg" />
+    <img id="CC13" src="Captions/Caption_13.jpg" />
+    <img id="CC14" src="Captions/Caption_14.jpg" />
+    <img id="CC15" src="Captions/Caption_15.jpg" />
+    <img id="CC16" src="Captions/Caption_16.jpg" />
+    <img id="CC17" src="Captions/Caption_17.jpg" />
+    <img id="CC18" src="Captions/Caption_18.jpg" />
+
 
     <audio id="Audio_01" src="Audio/Audio_01.mp3"></audio>
     <audio id="Audio_02" src="Audio/Audio_02.mp3"></audio>
@@ -138,13 +158,16 @@
   <a-scene id="playScene">
 
 
-    <!-- The player character. Consists of a sphere, a camera, and a cursor -->
+    <!-- The player character. Consists of a sphere, a camera, a cursor, and closed captioning -->
     <a-entity id="player" circular-boundary position="0 0.5 0" look-controls wasd-controls="acceleration: 50">
       <a-entity id="camera" camera position="0 1 -1"></a-entity>
       <a-entity cursor="fuse: false; rayOrigin: mouse" raycaster="objects: .clickable" position="0 1 -3"
         geometry="primitive: ring; radiusInner: .03; radiusOuter: .04" material="color: blue; shader: flat">
       </a-entity>
+        <a-image src="#CC01" position="0 0.75 -1.5" width=".75" height="0.06"></a-image>
+
     </a-entity>
+
 
     <!-- The level background -->
 
@@ -162,17 +185,13 @@
     </a-entity>
 
     <!-- The Bowl -->
-    <a-entity id="bowl" gltf-model="#crackedBowl" position = "-22 0 -35"></a-entity>
+    <a-entity id="bowl" gltf-model="#crackedBowl" position="-22 0 -35"></a-entity>
 
     <!-- The Timer  thetaStart: 0; thetaLength: 0 -->
-    <a-entity id="timer"
-        face-player
-        visible = "true"
-        geometry="primitive: ring; radiusInner: 0; radiusOuter: 0.8; thetaStart: 0; thetaLength: 0"
-        material="color: #87ceeb; side: double"
-        position="-24 4 -37">
+    <a-entity id="timer" face-player visible="true"
+      geometry="primitive: ring; radiusInner: 0; radiusOuter: 0.8; thetaStart: 0; thetaLength: 0"
+      material="color: #87ceeb; side: double" position="-24 4 -37">
     </a-entity>
-    
 
   </a-scene>
 </body>
