@@ -13,7 +13,6 @@ function timerCountdown(duration) {
         let percent = Math.min(1, elapsed / duration);
         let theta = percent * 360;
         timer.setAttribute("geometry", { thetaLength: theta });
-        console.log(i);
 
         if (i >= duration) {
             clearInterval(interval);
@@ -22,3 +21,8 @@ function timerCountdown(duration) {
     }, 1000)
 
 }
+
+function resetTimer() {
+    timer.setAttribute("geometry", { thetaLength: 0 });
+}
+

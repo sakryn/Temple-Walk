@@ -1,10 +1,1 @@
-Implemented a timer ring to count down the 15-second breath breaks
-
-
-Need:
-    Teleport with Hiro (DONE)
-    Face player always (DONE)
-    Countdown (DONE)
-    Reset
-
-countdown + reset are scuffed. No idea why.
+Implemented a timer countdown and reset function callable with space and keys
