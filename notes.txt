@@ -1,28 +1,20 @@
-Implemented a timer countdown and reset function callable with space and keys 
-
-Have the timer count down during silent moments.
-Changed timer color to a more soothing color
-
-Add in dialogue / closed captioning 
-
-Make all the icons bigger 
-
-
-Found a tentative way to access Hiro's rotation values. Still working on it though.
-
-( ^ DONE)
-
-
-
 Position Hiro lower
 Make Hiro move less when I move (edge)
 Animation rotation fix to make right
 
 
-
-
 const hiro = document.getElementById("hiro");
-
 let rotation = hiro.getAttribute("rotation");
+hiro.setAttribute("rotation",{x:0, y:90, z:0})
 
-hiro.setAttribute("rotation", {x:0, y:90, z:0});
+z = 0
+x = 0
+
+
+Figure out Hiro's rotation
+
+
+
+
+Modified the face-player function. 
+    Hiro now rotates only in the y-axis, preventing him from tilting up/down when the player gets close.
