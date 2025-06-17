@@ -12,5 +12,6 @@ Modified the face-player function.
 Positioned Hiro lower by half a unit.
 Imported all animation assets, giving a unique id to each.
 Created rotationCorrection function to account for model rotations, so that each animation faces the player.
-Animation fixed!!!
+Altered face-player script.
+Animation fixed!!! Hiro now always faces the player
 
