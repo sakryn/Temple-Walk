@@ -17,3 +17,5 @@ Animation fixed!!! Hiro now always faces the player
 Created a function to change Hiro's animation.
 Altered the timer so that it continues the face the player as normal
 
+Hiro now changes animation when talking- but he disappears and reloads. The "flicker" is noticeable. Your thoughts?
+
