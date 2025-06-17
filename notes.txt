@@ -18,3 +18,4 @@ Figure out Hiro's rotation
 
 Modified the face-player function. 
     Hiro now rotates only in the y-axis, preventing him from tilting up/down when the player gets close.
+Positioned Hiro lower by half a unit.
