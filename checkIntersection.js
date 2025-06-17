@@ -22,9 +22,7 @@ const sphere = document.querySelector("#background");
     // Start checking for intersections after scene loads
     document.querySelector('a-scene').addEventListener('loaded', checkIntersection);*/
 
-// Global variables for important checks
-window.exitEnabled = false;
-window.audioPlayed = false;
+
 
 AFRAME.registerComponent('collision-check', {
   init: function () {

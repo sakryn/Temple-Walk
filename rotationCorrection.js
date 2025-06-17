@@ -14,6 +14,7 @@ function rotationCorrection() {
     else if (id === "Hiro_07"){ return 245; }
     else if (id === "Hiro_08"){ return 270; }
     else if (id === "Hiro_09"){ return 0; }
+    else { return 0; }
 
 }
 

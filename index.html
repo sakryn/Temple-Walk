@@ -11,6 +11,7 @@
 
 
   <!-- Import Javascript files-->
+  <script src="init.js" defer></script>
   <script src="checkIntersection.js" defer></script>
   <script src="bound.js" defer></script>
   <script src="changeLevel.js" defer></script>
@@ -29,6 +30,7 @@
   <script src="timer.js" defer></script>
   <script src="captions.js" defer></script>
   <script src="rotationCorrection.js" defer></script>
+  <script src="changeModel.js" defer></script>
   <!--script src="playerAction.js" defer></script-->
 
   <!-- CSS Style for Start Screen -->
@@ -199,7 +201,7 @@
     <a-entity id="bowl" gltf-model="#crackedBowl" position="-22 0 -35"></a-entity>
 
     <!-- The Timer  thetaStart: 0; thetaLength: 0 -->
-    <a-entity id="timer" face-player visible="true"
+    <a-entity id="timer" face-player-timer visible="true"
       geometry="primitive: ring; radiusInner: 0; radiusOuter: 0.8; thetaStart: 0; thetaLength: 0"
       material="color: #87ceeb; side: double" position="-24 4 -37">
     </a-entity>

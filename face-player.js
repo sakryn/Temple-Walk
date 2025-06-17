@@ -36,3 +36,24 @@ AFRAME.registerComponent('face-player', {
         box.setAttribute("rotation", { x: 0, y: angleY, z: 0 });
     }
 });
+
+
+
+AFRAME.registerComponent('face-player-timer', {
+    tick: function () {
+        const player = document.querySelector('#player');
+        const box = this.el;
+        if (!player) return;
+
+        let playerPos = player.object3D.position;
+        let boxPos = box.object3D.position;
+
+        // Calculate direction in XZ plane
+        let dx = playerPos.x - boxPos.x;
+        let dz = playerPos.z - boxPos.z;
+        let angleY = Math.atan2(dx, dz) * 57.29578; // angle in degrees
+
+        // Convert to degrees and apply rotation
+        box.setAttribute("rotation", { x: 0, y: angleY, z: 0 });
+    }
+});
