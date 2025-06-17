@@ -1,17 +1,8 @@
-Position Hiro lower
 Make Hiro move less when I move (edge)
-Animation rotation fix to make right
 
 
-const hiro = document.getElementById("hiro");
-let rotation = hiro.getAttribute("rotation");
-hiro.setAttribute("rotation",{x:0, y:90, z:0})
 
-z = 0
-x = 0
-
-
-Figure out Hiro's rotation
+ hiro.setAttribute("gltf-model", "hiro-animations/Animation_Running_withSkin.glb");
 
 
 
@@ -19,3 +10,7 @@ Figure out Hiro's rotation
 Modified the face-player function. 
     Hiro now rotates only in the y-axis, preventing him from tilting up/down when the player gets close.
 Positioned Hiro lower by half a unit.
+Imported all animation assets, giving a unique id to each.
+Created rotationCorrection function to account for model rotations, so that each animation faces the player.
+Animation fixed!!!
+

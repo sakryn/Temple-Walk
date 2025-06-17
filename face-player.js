@@ -27,8 +27,10 @@ AFRAME.registerComponent('face-player', {
         // Calculate direction in XZ plane
         let dx = playerPos.x - boxPos.x;
         let dz = playerPos.z - boxPos.z;
-
         let angleY = Math.atan2(dx, dz) * 57.29578; // angle in degrees
+
+        // correct the rotation based on model
+        angleY += rotationCorrection();
 
         // Convert to degrees and apply rotation
         box.setAttribute("rotation", { x: 0, y: angleY, z: 0 });

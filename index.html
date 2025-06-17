@@ -28,6 +28,7 @@
   <script src="teleportTimer.js" defer></script>
   <script src="timer.js" defer></script>
   <script src="captions.js" defer></script>
+  <script src="rotationCorrection.js" defer></script>
   <!--script src="playerAction.js" defer></script-->
 
   <!-- CSS Style for Start Screen -->
@@ -109,7 +110,15 @@
     <a-asset-item id="repairedBowl" src="GLBs/Repaired Cracked Bowl.glb"></a-asset-item>
     <a-asset-item id="gate" src="GLBs/Japanese Gate.glb"></a-asset-item>
 
-    <a-asset-item id="Hiro" src="hiro-animations/Animation_Running_withSkin.glb"></a-asset-item>
+    <a-asset-item id="Hiro_01" src="hiro-animations/Animation_Long_Breathe_and_Look_Around_withSkin.glb"></a-asset-item>
+    <a-asset-item id="Hiro_02" src="hiro-animations/Animation_Running_withSkin.glb"></a-asset-item>
+    <a-asset-item id="Hiro_03" src="hiro-animations/Animation_Stand_and_Chat_withSkin.glb"></a-asset-item>
+    <a-asset-item id="Hiro_04" src="hiro-animations/Animation_Talk_Passionately_withSkin.glb"></a-asset-item>
+    <a-asset-item id="Hiro_05" src="hiro-animations/Animation_Talk_with_Hands_Open_withSkin.glb"></a-asset-item>
+    <a-asset-item id="Hiro_06" src="hiro-animations/Animation_Talk_with_Left_Hand_on_Hip_withSkin.glb"></a-asset-item>
+    <a-asset-item id="Hiro_07" src="hiro-animations/Animation_Talk_with_Left_Hand_Raised_withSkin.glb"></a-asset-item>
+    <a-asset-item id="Hiro_08" src="hiro-animations/Animation_Talk_with_Right_Hand_Open_withSkin.glb"></a-asset-item>
+    <a-asset-item id="Hiro_09" src="hiro-animations/Animation_Walking_withSkin.glb"></a-asset-item>
 
     <img id="CC01" src="Captions/Caption_01.jpg" />
     <img id="CC02" src="Captions/Caption_02.jpg" />
@@ -182,7 +191,7 @@
     </a-entity>
 
     <!-- Hiro -->
-    <a-entity id="hiro" gltf-model="#Hiro" animation-mixer rotation="0 90 0" 
+    <a-entity id="hiro" gltf-model="#Hiro_01" animation-mixer rotation="0 90 0" 
     position="-24 -0.5 -37" scale="1.5 1.5 1.5" face-player >
     </a-entity>
 
