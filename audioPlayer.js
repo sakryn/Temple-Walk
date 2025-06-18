@@ -25,22 +25,25 @@ function audioPlayer(src) {
 
     if (src === "01") {
         audio_01.play();
-        changeModel("Hiro_03");
+        //changeModel("Hiro_04");
+        changeModel("speak");
         changeCaptions("01");
         audio_01.onended = function () { audio_02.play(); changeCaptions("02"); };
         audio_02.onended = function () { audio_03.play(); changeCaptions("03"); };
-        audio_03.onended = function () { window.exitEnabled = true; hideCaptions(); changeModel("Hiro_01"); };
+        audio_03.onended = function () { window.exitEnabled = true; hideCaptions(); changeModel("stand");  };
+        //changeModel("Hiro_01");
     }
 
 
     else if (src === "02") {
         audio_04.play();
         changeCaptions("04");
+        changeModel("speak");
         audio_04.onended = function () { audio_05.play(); changeCaptions("05"); };
         audio_05.onended = function () { audio_06.play(); changeCaptions("06"); };
         audio_06.onended = function () { audio_silent.play(); timerCountdown(15) };
         audio_silent.onended = function () { audio_07.play(); changeCaptions("07"); };
-        audio_07.onended = function () { window.exitEnabled = true; hideCaptions(); changeModel("Hiro_01"); };
+        audio_07.onended = function () { window.exitEnabled = true; hideCaptions(); changeModel("stand");; };
     }
 
 

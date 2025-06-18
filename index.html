@@ -31,7 +31,7 @@
   <script src="captions.js" defer></script>
   <script src="rotationCorrection.js" defer></script>
   <script src="changeModel.js" defer></script>
-  <!--script src="playerAction.js" defer></script-->
+  <script src="playerAction.js" defer></script>
 
   <!-- CSS Style for Start Screen -->
   <style>
@@ -193,12 +193,17 @@
     </a-entity>
 
     <!-- Hiro -->
-    <a-entity id="hiro" gltf-model="#Hiro_01" animation-mixer rotation="0 90 0" 
-    position="-24 -0.5 -37" scale="1.5 1.5 1.5" face-player >
+    <a-entity id="hiro" gltf-model="#Hiro_01" animation-mixer visible = "true"
+    rotation="0 90 0" position="-24 -0.5 -37" scale="1.5 1.5 1.5" face-player log-clips>
+    </a-entity>
+
+    <!-- Hiro mirror. Used to make seamless transition to speaking-->
+    <a-entity id="hiroMirror" gltf-model="#Hiro_04" animation-mixer visible = "false"
+    rotation="0 90 0" position="-24 -0.5 -37" scale="1.5 1.5 1.5" face-player log-clips>
     </a-entity>
 
     <!-- The Bowl -->
-    <a-entity id="bowl" gltf-model="#crackedBowl" position="-22 0 -35"></a-entity>
+    <a-entity id="bowl" gltf-model="#crackedBowl" position="-22 0 -35" visible="true"></a-entity>
 
     <!-- The Timer  thetaStart: 0; thetaLength: 0 -->
     <a-entity id="timer" face-player-timer visible="true"

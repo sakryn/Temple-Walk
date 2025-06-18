@@ -1,21 +1,19 @@
 Make Hiro move less when I move (edge)
+    Due to his small size, irregardless of distance. Would have to make him bigger but that would ruin the effect.
+Animation transition "flicker" still a problem
+
+Changed the animation slightly. There is now a copy of Hiro in the same position of the character, preset to the talking animation.
+This "mirror" becomes visible (and Hiro invisible) during dialogue, meant to imitate a transition into dialogue.
 
 
+        if (typeof preloadModel === "function") {
+            preloadModel("Hiro_03");
+        }
 
- hiro.setAttribute("gltf-model", "hiro-animations/Animation_Running_withSkin.glb");
-
-
-
-
-Modified the face-player function. 
-    Hiro now rotates only in the y-axis, preventing him from tilting up/down when the player gets close.
-Positioned Hiro lower by half a unit.
-Imported all animation assets, giving a unique id to each.
-Created rotationCorrection function to account for model rotations, so that each animation faces the player.
-Altered face-player script.
-Animation fixed!!! Hiro now always faces the player
-Created a function to change Hiro's animation.
-Altered the timer so that it continues the face the player as normal
-
-Hiro now changes animation when talking- but he disappears and reloads. The "flicker" is noticeable. Your thoughts?
+        // Crossfade or blend to the new model/animation if supported
+        if (typeof crossfadeModel === "function") {
+            crossfadeModel("Hiro_03");
+        } else {
+            changeModel("Hiro_03");
+        }
 

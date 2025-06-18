@@ -1,5 +1,5 @@
 //const hiro = document.querySelector('#hiro');
-
+/*
 function changeModel(id) {
     if (id === "Hiro_01") { hiro.setAttribute("gltf-model", "hiro-animations/Animation_Long_Breathe_and_Look_Around_withSkin.glb"); }
     else if (id === "Hiro_02") { window.hiro.setAttribute("gltf-model", "hiro-animations/Animation_Running_withSkin.glb"); }
@@ -10,5 +10,24 @@ function changeModel(id) {
     else if (id === "Hiro_07") { window.hiro.setAttribute("gltf-model", "hiro-animations/Animation_Talk_with_Left_Hand_Raised_withSkin.glb"); }
     else if (id === "Hiro_08") { window.hiro.setAttribute("gltf-model", "hiro-animations/Animation_Talk_with_Right_Hand_Open_withSkin.glb"); }
     else if (id === "Hiro_09") { window.hiro.setAttribute("gltf-model", "hiro-animations/Animation_Walking_withSkin.glb"); }
+
+}*/
+
+
+
+function changeModel(command){
+
+    const hiroPosition = window.hiro.object3D.position;
+    window.hiroMirror.setAttribute("position", { x: hiroPosition.x, y: hiroPosition.y, z: hiroPosition.z });
+
+    if (command === "stand"){
+        window.hiro.setAttribute("visible", "true");
+        window.hiroMirror.setAttribute("visible", "false");
+    }
+
+    else if (command === "speak"){
+        window.hiro.setAttribute("visible", "false");
+        window.hiroMirror.setAttribute("visible", "true");
+    }
 
 }
