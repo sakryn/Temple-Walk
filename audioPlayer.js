@@ -25,55 +25,52 @@ function audioPlayer(src) {
 
     if (src === "01") {
         audio_01.play();
-        //changeModel("Hiro_04");
         changeModel("speak");
         changeCaptions("01");
         audio_01.onended = function () { audio_02.play(); changeCaptions("02"); };
         audio_02.onended = function () { audio_03.play(); changeCaptions("03"); };
-        audio_03.onended = function () { window.exitEnabled = true; hideCaptions(); changeModel("stand");  };
-        //changeModel("Hiro_01");
+        audio_03.onended = function () { window.exitEnabled = true; hideCaptions(); changeModel("stand"); changeCaptions("04"); };
     }
 
 
     else if (src === "02") {
         audio_04.play();
-        changeCaptions("04");
         changeModel("speak");
         audio_04.onended = function () { audio_05.play(); changeCaptions("05"); };
         audio_05.onended = function () { audio_06.play(); changeCaptions("06"); };
         audio_06.onended = function () { audio_silent.play(); timerCountdown(15) };
         audio_silent.onended = function () { audio_07.play(); changeCaptions("07"); };
-        audio_07.onended = function () { window.exitEnabled = true; hideCaptions(); changeModel("stand");; };
+        audio_07.onended = function () { window.exitEnabled = true; hideCaptions(); changeModel("stand"); changeCaptions("08"); };
     }
 
 
     else if (src === "03") {
         audio_08.play();
-        changeCaptions("08");
+        changeModel("speak");
         audio_08.onended = function () { audio_09.play(); changeCaptions("09"); };
         audio_09.onended = function () { audio_silent.play(); timerCountdown(15) };
         audio_silent.onended = function () { audio_10.play(); changeCaptions("10"); };
-        audio_10.onended = function () { changeBowl(); audio_plate.play(); };
-        audio_plate.onended = function () { audio_11.play(); changeCaptions("11"); };
-        audio_10.onended = function () { window.exitEnabled = true; hideCaptions(); changeModel("Hiro_01"); };
+        audio_10.onended = function () {audio_11.play(); changeCaptions("11"); };
+        audio_11.onended = function () {stopBackgroundMusic(); changeBowl(); audio_plate.play(); backgroundMusic();
+                                        window.exitEnabled = true; hideCaptions(); changeModel("stand"); changeCaptions("12"); };
     }
 
 
     else if (src === "04") {
         audio_12.play();
-        changeCaptions("12");
+        changeModel("speak");
         audio_12.onended = function () { audio_13.play(); changeCaptions("13"); };
-        audio_13.onended = function () { window.exitEnabled = true; hideCaptions(); changeModel("Hiro_01"); };
+        audio_13.onended = function () { window.exitEnabled = true; hideCaptions(); changeModel("stand"); changeCaptions("14"); };
     }
 
 
     else if (src === "05") {
         audio_14.play();
-        changeCaptions("14");
+        changeModel("speak");
         audio_14.onended = function () { audio_15.play(); changeCaptions("15"); };
         audio_15.onended = function () { audio_16.play(); changeCaptions("16"); };
         audio_16.onended = function () { audio_17.play(); changeCaptions("17"); };
         audio_17.onended = function () { audio_18.play(); changeCaptions("18"); };
-        audio_18.onended = function () { window.exitEnabled = true; hideCaptions(); changeModel("Hiro_01"); };
+        audio_18.onended = function () { window.exitEnabled = true; hideCaptions(); changeModel("stand"); changeCaptions("19"); };
     }
 }

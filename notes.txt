@@ -1,19 +1,6 @@
-Make Hiro move less when I move (edge)
-    Due to his small size, irregardless of distance. Would have to make him bigger but that would ruin the effect.
-Animation transition "flicker" still a problem
-
-Changed the animation slightly. There is now a copy of Hiro in the same position of the character, preset to the talking animation.
-This "mirror" becomes visible (and Hiro invisible) during dialogue, meant to imitate a transition into dialogue.
+Fixed a bug for the dialogue in level 3. The full dialogue is now spoken, and the bowl changes on command.
+Brushed up the captions. Before, the previous caption appeared briefly before being switched. Now the proper caption appears immediately.
+Applied the new animation transition style to all scenes.
 
 
-        if (typeof preloadModel === "function") {
-            preloadModel("Hiro_03");
-        }
-
-        // Crossfade or blend to the new model/animation if supported
-        if (typeof crossfadeModel === "function") {
-            crossfadeModel("Hiro_03");
-        } else {
-            changeModel("Hiro_03");
-        }
 
