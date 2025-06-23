@@ -194,21 +194,21 @@
 
     <!-- Hiro -->
     <a-entity id="hiro" gltf-model="#Hiro_01" animation-mixer visible = "true"
-    rotation="0 90 0" position="-24 -0.5 -37" scale="1.5 1.5 1.5" face-player log-clips>
+    rotation="0 90 0" position="-24, -60, -37" scale="20 50 20" face-player log-clips>
     </a-entity>
 
     <!-- Hiro mirror. Used to make seamless transition to speaking-->
     <a-entity id="hiroMirror" gltf-model="#Hiro_04" animation-mixer visible = "false"
-    rotation="0 90 0" position="-24 -0.5 -37" scale="1.5 1.5 1.5" face-player log-clips>
+    rotation="0 90 0" position="-24, -60, -37" scale="20 50 20" face-player log-clips>
     </a-entity>
 
     <!-- The Bowl -->
-    <a-entity id="bowl" gltf-model="#crackedBowl" position="-22 0 -35" visible="true"></a-entity>
+    <a-entity id="bowl" gltf-model="#crackedBowl" position="-10 -2 -50" visible="true" scale = "1 1 "></a-entity>
 
     <!-- The Timer  thetaStart: 0; thetaLength: 0 -->
     <a-entity id="timer" face-player-timer visible="true"
       geometry="primitive: ring; radiusInner: 0; radiusOuter: 0.8; thetaStart: 0; thetaLength: 0"
-      material="color: #87ceeb; side: double" position="-24 4 -37">
+      material="color: #87ceeb; side: double" position="-14 4 -47">
     </a-entity>
 
   </a-scene>

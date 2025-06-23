@@ -1,6 +1,1 @@
-Fixed a bug for the dialogue in level 3. The full dialogue is now spoken, and the bowl changes on command.
-Brushed up the captions. Before, the previous caption appeared briefly before being switched. Now the proper caption appears immediately.
-Applied the new animation transition style to all scenes.
-
-
-
+Lowered Hiro and increased his size, specifically his height
