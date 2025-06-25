@@ -3,3 +3,4 @@ window.exitEnabled = false;
 window.audioPlayed = false;
 window.hiro = document.querySelector("#hiro");
 window.hiroMirror = document.querySelector("#hiroMirror");
+window.bowl = document.querySelector("#bowl");

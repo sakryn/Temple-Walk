@@ -39,7 +39,7 @@ AFRAME.registerComponent('collision-check', {
     let playerPos = this.player.object3D.position;
     let hiroPos = this.hiro.object3D.position;
     let distance = playerPos.distanceTo(hiroPos);
-    if (distance < 20 && !window.audioPlayed) { // Maybe check if the game was completed? A future task...
+    if (distance < 100 && !window.audioPlayed) { // Maybe check if the game was completed? A future task...
       window.audioPlayed = true;
       audioPlayer(this.material.src.id);
     }

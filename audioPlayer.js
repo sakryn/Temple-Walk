@@ -71,6 +71,6 @@ function audioPlayer(src) {
         audio_15.onended = function () { audio_16.play(); changeCaptions("16"); };
         audio_16.onended = function () { audio_17.play(); changeCaptions("17"); };
         audio_17.onended = function () { audio_18.play(); changeCaptions("18"); };
-        audio_18.onended = function () { window.exitEnabled = true; hideCaptions(); changeModel("stand"); changeCaptions("19"); };
+        audio_18.onended = function () { window.exitEnabled = true; hideCaptions(); changeModel("stand"); }
     }
 }
