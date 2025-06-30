@@ -1,6 +1,2 @@
-Export as HTML 5 Zip file (Sent, awaiting reply)
 
-Allow VR movement (joystick) - Done I think
-
-Bowl is completely on the ground (make it higher)
-
+Raised the bowl so that it is more visible to the player
