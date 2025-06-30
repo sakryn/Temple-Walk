@@ -171,7 +171,7 @@
 
 
     <!-- The player character. Consists of a sphere, a camera, a cursor, and closed captioning -->
-    <a-entity id="player" circular-boundary position="74 0.5 44" look-controls wasd-controls="acceleration: 50">
+    <a-entity id="player" circular-boundary position="74 0.5 44" look-controls wasd-controls="acceleration: 50" movement-controls="controls: gamepad,keyboard">
       <a-entity id="camera" camera position="0 1 -1"></a-entity>
       <a-entity cursor="fuse: false; rayOrigin: mouse" raycaster="objects: .clickable" position="0 1 -3"
         geometry="primitive: ring; radiusInner: .03; radiusOuter: .04" material="color: blue; shader: flat">
