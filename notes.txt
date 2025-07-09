@@ -1,7 +1,6 @@
 
-I think the last item to troubleshoot is movement in VR.  ()
+I think the last item to troubleshoot is movement in VR.
 
 Once that is taken care of, to call this project complete once we have tested it, can you:
      write up a step by step summary of how we got everything working from getting the files into GitHub and the process you completed 
      (so it can be replicated by either us on our next project or a future student)
- 
