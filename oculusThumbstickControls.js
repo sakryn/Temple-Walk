@@ -3,7 +3,8 @@
 AFRAME.registerComponent('oculus-thumbstick-controls', {
     schema: {
         acceleration: { default: 45 },
-        rigSelector: {default: "#player"}, // Change rig to player
+        rigSelector: {default: "#player"},
+        //rigSelector: {default: "#rig"},
         fly: { default: false },
         controllerOriented: { default: false },
         adAxis: {default: 'x', oneOf: ['x', 'y', 'z']},
