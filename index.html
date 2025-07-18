@@ -8,9 +8,11 @@
   <!-- Import AFrame-->
   <script src="https://aframe.io/releases/1.5.0/aframe.min.js"></script>
   <script src="https://cdn.jsdelivr.net/gh/n5ro/aframe-extras@6.1.1/dist/aframe-extras.min.js"></script>
+ 
 
 
   <!-- Import Javascript files-->
+  <script src="oculusThumbstickControls.js"></script>
   <script src="init.js" defer></script>
   <script src="checkIntersection.js" defer></script>
   <script src="bound.js" defer></script>
@@ -175,11 +177,19 @@
     <!-- The player character. Consists of a sphere, a camera, a cursor, and closed captioning -->
 
     <a-entity id="player" circular-boundary position="74 0.5 44" look-controls wasd-controls movement-controls="controls: gamepad,keyboard; acceleration: 100">
+      
       <a-entity id="camera" camera position="0 1 -1"></a-entity>
+
       <a-entity cursor="fuse: false; rayOrigin: mouse" raycaster="objects: .clickable" position="0 1 -3"
         geometry="primitive: ring; radiusInner: .03; radiusOuter: .04" material="color: blue; shader: flat">
       </a-entity>
+
       <a-image id="closedCaptioning" visible="false" src="#CC01" position="0 0.75 -1.5" width=".75" height="0.06"></a-image>
+
+      <a-entity oculus-touch-controls="hand: left" ></a-entity>
+
+      <a-entity oculus-touch-controls="hand: right" oculus-thumbstick-controls></a-entity>
+
     </a-entity>
 
 
