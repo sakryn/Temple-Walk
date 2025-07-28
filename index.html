@@ -8,7 +8,7 @@
   <!-- Import AFrame-->
   <script src="https://aframe.io/releases/1.5.0/aframe.min.js"></script>
   <script src="https://cdn.jsdelivr.net/gh/n5ro/aframe-extras@6.1.1/dist/aframe-extras.min.js"></script>
- 
+
 
 
   <!-- Import Javascript files-->
@@ -183,9 +183,15 @@
 
       <a-image id="closedCaptioning" visible="false" src="#CC01" position="0 0.75 -1.5" width=".75" height="0.06"></a-image>
 
-      <a-entity oculus-touch-controls="hand: left" ></a-entity>
+      <a-entity id="rig">
 
-      <a-entity oculus-touch-controls="hand: right" oculus-thumbstick-controls></a-entity>
+        <a-entity oculus-touch-controls="hand: left" ></a-entity>
+
+        <a-entity oculus-touch-controls="hand: right" oculus-thumbstick-controls></a-entity>
+
+    </a-entity>
+
+
 
     </a-entity>
 

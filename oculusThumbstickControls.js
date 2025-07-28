@@ -1,10 +1,7 @@
-// credit to "https://gftruj.github.io/webzamples/aframe/controls/oculus-thumbstick-controls.js"
-
 AFRAME.registerComponent('oculus-thumbstick-controls', {
     schema: {
         acceleration: { default: 45 },
-        rigSelector: {default: "#player"},
-        //rigSelector: {default: "#rig"},
+        rigSelector: {default: "#rig"},
         fly: { default: false },
         controllerOriented: { default: false },
         adAxis: {default: 'x', oneOf: ['x', 'y', 'z']},
