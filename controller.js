@@ -10,7 +10,7 @@ AFRAME.registerComponent('smooth-locomotion', {
 
     // Get scene element references
     this.player = document.querySelector('#player');
-    this.head = document.querySelector('#head');
+    this.head = document.querySelector('#camera');
     var leftHand = document.querySelector('#controllerL');
 
     // Set up variables to store controller input data and three.js data
@@ -65,7 +65,7 @@ AFRAME.registerComponent('turn-controls', {
 
     // Get scene element references
     this.player = document.querySelector('a-scene').querySelector('#player');
-    this.head = player.querySelector('#head');
+    this.head = player.querySelector('#camera');
     var controllerR = document.querySelector('a-scene').querySelector('#controllerR');
 
     // Set up variables to read controller input and control turn logic
